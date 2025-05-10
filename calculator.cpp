@@ -106,34 +106,6 @@ void kalkulatorBola() {
     cin.get();
 }
 
-void kalkulatorLimas() {
-    int pilihan;
-    double luasAlas, tinggi;
-limasMenu:
-    system("cls");
-    cout << "=== Kalkulator Limas ===\n";
-    cout << "1. Limas Segitiga\n";
-    cout << "2. Limas Segiempat\n";
-    cout << "3. Kembali\n";
-    cout << "Pilih: ";
-    cin >> pilihan;
-
-    if (pilihan == 1 || pilihan == 2) {
-        cout << "Masukkan luas alas: "; cin >> luasAlas;
-        cout << "Masukkan tinggi limas: "; cin >> tinggi;
-        cout << "Volume: " << (1.0/3.0) * luasAlas * tinggi << endl;
-    } else if (pilihan == 3) {
-        return;
-    } else {
-        cout << "Pilihan tidak valid!\n";
-    }
-
-    char kembali;
-    cout << "\nKembali ke menu Limas? (Y/N): ";
-    cin >> kembali;
-    if (kembali == 'Y' || kembali == 'y') goto limasMenu;
-}
-
 void kalkulatorPrisma() {
     int pilihan;
     double luasAlas, tinggi;
@@ -185,9 +157,8 @@ menuUtama:
         case 3: kalkulatorTabung(); goto menuUtama;
         case 4: kalkulatorKerucut(); goto menuUtama;
         case 5: kalkulatorBola(); goto menuUtama;
-        case 6: kalkulatorLimas(); goto menuUtama;
-        case 7: kalkulatorPrisma(); goto menuUtama;
-        case 8:
+        case 6: kalkulatorPrisma(); goto menuUtama;
+        case 7:
             system("cls");
             cout << "Terima kasih telah menggunakan kalkulator.\n";
             break;
